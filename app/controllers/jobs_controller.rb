@@ -2,7 +2,9 @@ class JobsController < ApplicationController
     before_action :set_job, only: [:show, :edit, :update, :destroy]    
     
     def index
-        @jobs = Job.take(3)
+        @search_query = params[:query]
+
+        @jobs = Job.search(@search_query)
     end
 
     def new
