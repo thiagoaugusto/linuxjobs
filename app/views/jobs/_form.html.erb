@@ -1,0 +1,47 @@
+<div>
+    <% if @job.errors.any? %>
+        <h3> Errors </h3>
+        <% @job.errors.full_messages.each do |msg| %>
+            <p>
+                <%= msg %>
+            </p>
+        <% end %>
+    <% end %>
+</div>
+
+<%= form_for @job do |f| %>
+    <p>
+        <%= f.label :company %>
+    </p> 
+    <p>
+        <%= f.text_field :company %>    
+    </p>
+    <p>
+        <%= f.label :title %>
+    </p>
+    <p>
+        <%= f.text_field :title %>    
+    </p>
+
+    <p>
+        <%= f.label :location %>        
+    </p>
+    <p>
+        <%= f.text_field :location %>    
+    </p>
+    <p>
+        <%= f.label :description %>        
+    </p>
+    <p>
+        <%= f.text_area :description %>
+    </p>
+    <p>
+        <%= f.label :skills %>        
+    </p>        
+    <p>
+        <%= f.text_area :skills %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>

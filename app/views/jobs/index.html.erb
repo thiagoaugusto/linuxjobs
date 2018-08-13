@@ -1,0 +1,14 @@
+<h1> Jobs list </h1>
+
+<% @jobs.each do |job|%>    
+    <p>
+        <%= link_to job.title, job_path(job) %>                
+    </p>
+    <p>
+        <%= job.company %> - <%= job.location%>
+        <%= link_to 'Delete', job_path(job), method: :delete, data: {confirm: "Are you sure?"}%>
+    </p>
+    
+<% end %>
+
+<%= link_to 'New Job', new_job_path %>
