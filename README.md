@@ -1,24 +1,31 @@
-# README
+# Linux Jobs
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Yes, we love Linux community!
+Job board for Linux Administrators.
 
-Things you may want to cover:
+## Clone the repository
+```
+git clone https://github.com/thiagoaugusto/linuxjobs.git
+```
 
-* Ruby version
+## Install dependencies
+```
+bundle install
+```
 
-* System dependencies
+## Create database
+```
+rake db:create
+rake db:migrate
+rake db:seed
+```
 
-* Configuration
+## Run tests
+```
+rails test
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Run server
+```
+rails server
+```
