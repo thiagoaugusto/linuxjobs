@@ -21,7 +21,7 @@ class JobsControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Job.count') do
       post jobs_path, params: { job: { company: @job.company, title: @job.title,
                              location: @job.location, description: @job.description, 
-                             skills: @job.skills} }
+                             skills: @job.skills, email: @job.email} }
     end
 
     assert_not_nil assigns(:job)

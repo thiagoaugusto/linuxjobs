@@ -1,7 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 job:
-  company: Siagri Software
+  company: Linux Jobs
   title: Linux Sysadmin
   location: Goiânia/GO - Brazil
   description: Job description
   skills: List of skills
+  email: contact@linuxjobs.com
