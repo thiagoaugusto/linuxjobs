@@ -13,9 +13,11 @@
     <%= @job.skills %>
 </p>
 
-<p>
-    <%= link_to 'Edit', edit_job_path(@job) %>
-    <%= link_to 'Delete', job_path(@job), method: :delete, data: {confirm: "Are you sure?"}%>    
-</p>
+<% if is_logged_in? %>
+    <p>
+        <%= link_to 'Edit', edit_job_path(@job) %>
+        <%= link_to 'Delete', job_path(@job), method: :delete, data: {confirm: "Are you sure?"}%>    
+    </p>
+<% end %>
 
 <%= render 'go_back' %>
